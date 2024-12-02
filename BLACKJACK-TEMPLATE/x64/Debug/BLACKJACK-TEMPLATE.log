@@ -1,0 +1,8 @@
+﻿  OpenGLRenderer.cpp
+  OpenGLShader.cpp
+D:\College Docs\Term 2\122 - Programming Fundimentals 1\Blackjack_SDL\BLACKJACK-TEMPLATE\OpenGLShader.cpp(40,33): warning C4101: 'e': unreferenced local variable
+  (compiling source file '/OpenGLShader.cpp')
+  
+  WorldBoundary.cpp
+  Generating Code...
+  BLACKJACK-TEMPLATE.vcxproj -> D:\College Docs\Term 2\122 - Programming Fundimentals 1\Blackjack_SDL\x64\Debug\BLACKJACK-TEMPLATE.exe
