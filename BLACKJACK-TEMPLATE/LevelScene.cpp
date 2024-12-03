@@ -257,7 +257,7 @@ void LevelScene::stand()
 
 void LevelScene::split()
 {
-    playerHands[currentHand].pop_back();
+    
 }
 
 void LevelScene::drawCard()

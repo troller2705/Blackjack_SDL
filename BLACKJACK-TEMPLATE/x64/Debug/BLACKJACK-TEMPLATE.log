@@ -1,8 +1,8 @@
-﻿  OpenGLRenderer.cpp
-  OpenGLShader.cpp
-D:\College Docs\Term 2\122 - Programming Fundimentals 1\Blackjack_SDL\BLACKJACK-TEMPLATE\OpenGLShader.cpp(40,33): warning C4101: 'e': unreferenced local variable
-  (compiling source file '/OpenGLShader.cpp')
+﻿  LevelScene.cpp
+D:\College Docs\Term 2\122 - Programming Fundimentals 1\Blackjack_SDL\BLACKJACK-TEMPLATE\LevelScene.cpp(230,57): warning C4805: '==': unsafe mix of type 'int' and type 'bool' in operation
+  (compiling source file '/LevelScene.cpp')
   
-  WorldBoundary.cpp
+  Main.cpp
+  MenuScene.cpp
   Generating Code...
   BLACKJACK-TEMPLATE.vcxproj -> D:\College Docs\Term 2\122 - Programming Fundimentals 1\Blackjack_SDL\x64\Debug\BLACKJACK-TEMPLATE.exe
