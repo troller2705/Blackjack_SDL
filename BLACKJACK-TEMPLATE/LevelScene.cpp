@@ -143,6 +143,8 @@ void LevelScene::displayButtons(bool p, bool b, bool h, bool s, bool d, bool sp)
 
 void LevelScene::startGame()
 {
+    dd = false;
+    sp = false;
     betTotal = 0;
     currentHand = 0;
 
@@ -215,7 +217,6 @@ void LevelScene::play()
 void LevelScene::bet()
 {
     int credits = wallet->getTotal();
-    bool sp = false, dd = false;
 
     bank->setActive(false);
     betTotal = bank->getTotal();

@@ -67,5 +67,8 @@ class LevelScene : public Scene
 		Wallet* wallet;
 		int betTotal;
 
+		bool sp = false;
+		bool dd = false;
+
 		const float playerOffsetX = 150.0f;
 };
