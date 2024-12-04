@@ -1,5 +1,6 @@
 ﻿  LevelScene.cpp
-  Main.cpp
-  MenuScene.cpp
-  Generating Code...
-  BLACKJACK-TEMPLATE.vcxproj -> D:\College Docs\Term 2\122 - Programming Fundimentals 1\Blackjack_SDL\x64\Debug\BLACKJACK-TEMPLATE.exe
+D:\College Docs\Term 2\122 - Programming Fundimentals 1\Blackjack_SDL\BLACKJACK-TEMPLATE\LevelScene.cpp(272,11): error C2374: 'card': redefinition; multiple initialization
+  (compiling source file '/LevelScene.cpp')
+      D:\College Docs\Term 2\122 - Programming Fundimentals 1\Blackjack_SDL\BLACKJACK-TEMPLATE\LevelScene.cpp(267,11):
+      see declaration of 'card'
+  
