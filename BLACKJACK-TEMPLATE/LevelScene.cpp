@@ -260,18 +260,19 @@ void LevelScene::stand()
 
 void LevelScene::split()
 {
-    playerHands[1].addCard(playerHands[currentHand].getCards()[0]);
-    playerHands[2].addCard(playerHands[currentHand].getCards()[1]);
+    //playerHands[1].addCard(playerHands[currentHand].getCards()[1]);
+    playerHands[currentHand].removeCard();
     Card* card = deck->dealCard();
-    card->setPosition(10 + (playerOffsetX * playerHands[1].getCards().size()), 320.0f);
+    card->setPosition(10 + (playerOffsetX * playerHands[currentHand].getCards().size()), 320.0f);
     card->setFrame(card->getObjectID());
-    playerHands[1].addCard(card);
+    playerHands[currentHand].addCard(card);
     addGameObject(card, 3);
-    card->setPosition(30 + (playerOffsetX * playerHands[2].getCards().size()), 320.0f);
-    card->setFrame(card->getObjectID());
-    playerHands[2].addCard(card);
-    addGameObject(card, 3);
-    playerHands[currentHand] = playerHands[1];
+    //card = deck->dealCard();
+    //card->setPosition(30 + (playerOffsetX * playerHands[1].getCards().size()), 320.0f);
+    //card->setFrame(card->getObjectID());
+    //playerHands[1].addCard(card);
+    //addGameObject(card, 3);
+    dealDealer();
 }
 
 void LevelScene::drawCard()

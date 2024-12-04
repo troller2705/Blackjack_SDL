@@ -6,6 +6,11 @@ void Hand::addCard(Card* card)
     cards.push_back(card);
 }
 
+void Hand::removeCard()
+{
+    cards.pop_back();
+}
+
 std::vector<Card*> Hand::getCards() const 
 {
     return cards;

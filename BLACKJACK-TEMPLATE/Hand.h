@@ -5,6 +5,7 @@
 class Hand {
 public:
     void addCard(Card* card);
+    void removeCard();
     std::vector<Card*> getCards() const;
 
     int getValue() const;
