@@ -228,10 +228,8 @@ void LevelScene::bet()
 
     dealerHand.getCards()[0]->setFrame(dealerHand.getCards()[0]->getObjectID());
 
-    if ((playerHands[currentHand].getValue() == 9) || (playerHands[currentHand].getValue() == 10) || (playerHands[currentHand].getValue() == 11)) {
-        dd = true;
-        LOG_INFO("dd");
-    }
+    if ((playerHands[currentHand].getValue() == 9) || (playerHands[currentHand].getValue() == 10) || (playerHands[currentHand].getValue() == 11)) dd = true;
+   
     if (playerHands[currentHand].canSplit()) sp = true;
 
     displayButtons(false, false, true, true, dd, sp);
@@ -269,7 +267,6 @@ void LevelScene::split()
     card->setFrame(card->getObjectID());
     playerHands[1].addCard(card);
     addGameObject(card, 3);
-    Card* card = deck->dealCard();
     card->setPosition(30 + (playerOffsetX * playerHands[2].getCards().size()), 320.0f);
     card->setFrame(card->getObjectID());
     playerHands[2].addCard(card);
