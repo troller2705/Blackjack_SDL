@@ -227,7 +227,7 @@ void LevelScene::bet()
 
     dealerHand.getCards()[0]->setFrame(dealerHand.getCards()[0]->getObjectID());
 
-    if (playerHands[currentHand].getValue() == (9 || 10 || 11)) dd = true;
+    if (playerHands[currentHand].getValue() == (9 | 10 | 11)) dd = true;
     if (playerHands[currentHand].canSplit()) sp = true;
 
     displayButtons(false, false, true, true, dd, sp);
@@ -246,6 +246,7 @@ void LevelScene::hit()
 void LevelScene::doubleDown()
 {
     betTotal *= 2;
+    wallet->setTotal(wallet->getTotal() + betTotal);
     drawCard();
     dealDealer();
 }
@@ -281,12 +282,12 @@ void LevelScene::dealDealer()
     }
     else if (dealerHand.getValue() > 21 || playerHands[currentHand].getValue() > dealerHand.getValue()) {
         LOG_INFO("Player wins!\n");
-        wallet += (betTotal * 2);
+        wallet->setTotal(wallet->getTotal() + (betTotal * 2));
         startGame();
     }
     else {
         LOG_INFO("It's a tie!\n");
-        wallet += betTotal;
+        wallet->setTotal(wallet->getTotal() + betTotal);
         startGame();
     }
 }
