@@ -165,8 +165,20 @@ void LevelScene::startGame()
         hand.clear();
     }
 
+    for (auto hand : splitHands)
+    {
+        for (auto card : hand.getCards())
+        {
+            card->setVisible(false);
+            removeGameObject(card);
+        }
+
+        hand.clear();
+    }
+
     dealerHand.clear();
     playerHands.clear();
+    splitHands.clear();
 
     dealerLabel->setText("DEALER");
     playerLabel->setText("PLAYER");
@@ -260,18 +272,21 @@ void LevelScene::stand()
 
 void LevelScene::split()
 {
-    //playerHands[1].addCard(playerHands[currentHand].getCards()[1]);
+    //splitHands[currentHand].addCard(playerHands[currentHand].getCards()[1]);
     playerHands[currentHand].removeCard();
+
     Card* card = deck->dealCard();
     card->setPosition(10 + (playerOffsetX * playerHands[currentHand].getCards().size()), 320.0f);
     card->setFrame(card->getObjectID());
     playerHands[currentHand].addCard(card);
     addGameObject(card, 3);
+
     //card = deck->dealCard();
-    //card->setPosition(30 + (playerOffsetX * playerHands[1].getCards().size()), 320.0f);
+    //card->setPosition(30 + (playerOffsetX * splitHands[currentHand].getCards().size()), 320.0f);
     //card->setFrame(card->getObjectID());
-    //playerHands[1].addCard(card);
+    //splitHands[currentHand].addCard(card);
     //addGameObject(card, 3);
+
     dealDealer();
 }
 

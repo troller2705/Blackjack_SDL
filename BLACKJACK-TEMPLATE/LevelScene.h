@@ -61,7 +61,7 @@ class LevelScene : public Scene
 		Deck* deck;
 		Hand dealerHand;
 		int currentHand = 0;
-		std::vector<Hand> playerHands;
+		std::vector<Hand> playerHands, splitHands;
 
 		Bank* bank;
 		Wallet* wallet;
